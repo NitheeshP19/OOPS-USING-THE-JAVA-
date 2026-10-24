@@ -15,7 +15,7 @@ class Vehicle {
         System.out.println("The vehicle name: " + name);
     }
 
-    // Method overloading
+    // Method Overloading
     public void show(int days) {
         System.out.println("How many days: " + days);
     }
@@ -26,8 +26,9 @@ class Vehicle {
     }
 }
 
-// Inheritance
 class Car extends Vehicle {
+
+    // Constructor
     Car(String n) {
         super(n);
     }
@@ -35,9 +36,16 @@ class Car extends Vehicle {
     void display() {
         System.out.println("This is a Car.");
     }
+
+    // Method Overriding
+    @Override
+    public void show() {
+        super.show();
+        System.out.println("This method is overridden in Car class.");
+    }
 }
 
-public class Main {
+class VehicleRental {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
